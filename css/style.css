@@ -169,6 +169,119 @@ footer .footer_logo
 		padding-bottom: 20px;
 		font-size: 50px;
 	}
+.gallery
+	{
+		width: 80%;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+	}
+.photo-itm
+	{
+		width: 25%;
+	}
+.photo-itm img
+	{
+		box-sizing: border-box;
+		max-width: 100%;
+	}
+.blog-container
+	{
+		font-family: monospace;
+		background-color: #fafafa;
+		border-radius: 5px;
+		box-shadow: rgba(0, 0, 0, 0.2) 0 4 px 2 px -2px;
+		font-weight: 100;
+		margin: 48px auto;
+		width: 50rem;
+	}
+.blog-container h1
+	{
+		font-size:default;font-weight: default;
+		font-family: 'Raleway', sans-serif
+	}
+.blog-cover
+	{
+		background: url(../img/background.jpg);
+		background-size: cover;
+		border-radius: 5px;
+		height: 15rem;
+		box-shadow: inset rgba(0, 0, 0, 0.2) 64px 64px 64px 64px; 
+	}
+.blog-body
+	{
+		width: 80%;
+		margin: auto;
+	}	
+.blog-tittle
+	{
+		color: Black;
+		font-size: 16px;
+	}
+.blog-text p
+	{
+		color: black;
+		border: 1px solid grey;
+		border-radius: 3px;
+	}
+.blog-tags ul
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		list-style: none;
+		padding-left: 0;
+	}
+.blog-tags li
+	{
+		margin-left: .5rem;
+	}
+.blog-tags a
+	{
+		border: 1px solid grey;
+		border-radius: 3px;
+		color: grey;
+		font-size: .75rem;
+		height: 1.5rem;
+		line-height: 1.5rem;
+		letter-spacing: 1px;
+		padding: 0 .5rem;
+		text-align: center;
+		text-transform: uppercase;
+		white-space: nowrap;
+		width: 5rem;
+	}
+.blog-footer
+	{
+		margin: 0 auto;
+		padding-bottom: .125rem;
+		width: 80%;
+	}
+.blog-footer ul
+	{
+		list-style: none;
+		display: flex;
+		flex: row wrap;
+		justify-content: flex-end;
+		padding-left: 0;
+	}
+.blog-footer li
+	{
+		color: grey;
+		font-size: .75rem;
+		height: 1.5rem;
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		white-space: nowrap;
+	}
+.published-date
+	{
+		border: 1px solid grey;
+		border-radius: 3px;
+		padding: 0 .5rem;
+	}
 @media screen and (max-width: 768px) /* Делаем определенные настройки для экранов меньше 768px */
 	{
 		.topmenu a:not(:first-child)
@@ -211,7 +324,14 @@ footer .footer_logo
 		{
 			width: 100%;
 		}
+		.photo-itm
+		{
+			width: 45%;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
 	}
+
 @media screen and (max-width: 900px)
 	{
 		.main_photo
@@ -221,4 +341,18 @@ footer .footer_logo
 				height: 300px;
 			}
 			
+	}
+@media screen and (max-width: 900px)
+	{
+		.project
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.gallery
+		{
+			margin: auto;
+			width: auto;	
+		}
 	}
