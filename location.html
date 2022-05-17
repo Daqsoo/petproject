@@ -19,12 +19,35 @@
 					<a href="projects.html">PROJECTS</a>
 					<a href="blog.html">BLOG</a>
 					<a href="contact.html">CONTACT</a>
-					<a href="about.html">ABOUT</a>
-					<a href="service.html">SERVICE</a>
 					<a href="location.html">LOCATION</a>
 					<a id="menu" href="#" class="burger">&#9776;</a>
 				</div>
 		</header>
+		<main>
+			<h1>Location</h1>
+			<div class="map">
+						<script type="text/javascript">
+					// Initialize and add the map
+					function initMap() {
+				  	// The location of Uluru
+				  const uluru = { lat: -25.344, lng: 131.031 };
+				  // The map, centered at Uluru
+				  const map = new google.maps.Map(document.getElementById("map"), {
+				    zoom: 4,
+				    center: uluru,
+				  });
+				  // The marker, positioned at Uluru
+				  const marker = new google.maps.Marker({
+				    position: uluru,
+				    map: map,
+				  });
+				}
+			</script>
+					<script async
+		    			src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+				</script>
+</div>
+		</main>
 		<footer>
 			<nav>
 				<div>

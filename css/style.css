@@ -5,6 +5,16 @@
 	margin: 0; /*Внешний отступ*/
 	border: 0;
 }
+:root
+	{
+		--index: calc(1vw + 1vh);
+		--gutter: 30 px;  /*Пространство где картинка проваливается*/
+		--side-small: 26;  /*Малая сторона*/
+		--side-big: 36;  /*большая сторона*/
+		--depth: 2000px; /*Глубина*/
+		--transition : .75s cubic-bezier(0.075, .5, 0, 1);
+
+	}
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -25,6 +35,10 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+body
+{
+	font-family: 'Raleway', sans-serif;
+}
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
@@ -34,21 +48,25 @@ a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;color: white}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+html
+{
+	background-color: black;
+}
+p
+{color: white;}
 
-body 
-	{
-		font-family: 'Raleway', sans-serif;
-	}	
+
+ /*Анимация разноцветного имени*/
 .logo 
 	{
 	-webkit-animation: color 10s ease-in-out infinite;
 	-moz-animation: color 10s ease-in-out infinite;
 	-o-animation: color 10s ease-in-out infinite;
 	animation: color 60s ease-in-out infinite;
-    color: white;
+    color: black;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -62,10 +80,11 @@ body
 	50%{background-color: #00ffff;} /*cyan*/
 	62.5%{background-color: #0000ff;}	/*blue*/ 
 	75%{background-color: #ff00ff;}	 /*magenta*/
-	87.5%{background-color: white;}	
+	87.5%{background-color: black;}	
 	95%{background-color: #ffa8a8;} /*light red*/
 	100%{background-color: #ff756c;}	
 	}
+ /*Само имя*/
 .logo_center
 	{
 		text-align: center;
@@ -74,7 +93,7 @@ body
 		max-width: 100%;
 		box-sizing: border-box;
 		font-size: 18px;
-		color: black;
+		color: white;
 	}
 nav
 	{
@@ -82,46 +101,47 @@ nav
 		width: 800px;
 		height: 50px;
 	}
-.topmenu
-	{
+.topmenu  /*Меню*/
+ 	{
+ 		text-align: center;
 		font-size: 14px;
-		margin-top: 40px;
-		background-color: white;
+		margin-top: 20px;
+		background-color: black;
 	}
-.topmenu a 
+.topmenu a  /*Заголовки в меню*/
 	{
-		color: black;
+		color: white;
 		font-family: 'Dela Gothic One', cursive;
 		text-align: center;
 		padding: 14px 14px;
 		font-size: 15px;
 	}
-.topmenu a:hover /* Под кнопочкой черная линия */
+.topmenu a:hover /* Под кнопочкой зеленая линия */
 	{
-		border-bottom: 2px solid #00ff00;
+		border-bottom: 2px solid white;
 		/*transition: 0.7s;*/
 	}
-.topmenu .burger 
+.topmenu .burger  /*бургер в телефоне*/
 	{
 		display: none;
 	}
-.main_photo
+.main_photo  /*Фото на основной странице*/
 	{
 		width: 70%;
 		height: 600px;
 		display: block;
 		margin: auto;
 	}
-.mainphoto_theme
+.mainphoto_theme  /*Задний фон для фото на основной странице*/
 	{
-		background-color: lightgrey;
+		background-color: 
 	}		
 .icons_container
 	{
 		display: flex;
 		justify-content: center;/* выравнивание элемента вдоль гор оси */
 	}
-.icons
+.icons  /*Иконки на основной странице(под которыми текст)*/
 	{
 		padding-top: 100px;
 		padding-bottom: 40px;
@@ -129,12 +149,12 @@ nav
 		display: flex;
 		font-style: monospace;
 		font-size: 17px;
-		color: black;
+		color: white;
 		text-align: center;
 		justify-content: space-between;
 		flex-wrap: wrap; /* перенос */
 	}
-.icon_list
+.icon_list  /*Нексолько иконок в одном блоке*/
 	{
 		width: 30%;
 	}
@@ -142,21 +162,25 @@ footer
 	{	
 		width: 100%;
 		height: auto;
-		background-color: black;
+		background-color: white;
 		margin:0 auto;
 		text-align: center;
 		padding-top: 25px;
 		padding-bottom: 5px;
 	}
+footer p
+	{
+		color: black;
+	}
 footer a 
 	{
-		color: white;
+		color: black;
 		font-family: 'Dela Gothic One', cursive;
 		font-size: 16px;
 	}
 footer a 
 	{
-		color: white;
+		color: black;
 		font-family: 'Dela Gothic One', cursive;
 		font-size: 16px;
 	}
@@ -169,28 +193,91 @@ footer .footer_logo
 		padding-bottom: 20px;
 		font-size: 50px;
 	}
+ /*Тут идут все страницы после основной*/
+  /*------------------------------------------------*/
+.project
+ 	{
+ 		margin: 0;
+ 		margin-top: -50px;
+ 		padding: 0;
+ 		box-sizing: border-box;
+ 		background-color: black;
+		color: white;
+		text-shadow: 1.5px 1.5px 1.5px green;
+		font-size: calc(var(--index) * .8);
+		line-height: 1.75;
+		height: var(--depth);
+		font-weight: 300;
+ 	}
+.project-container
+	{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		perspective: 1500px; /**/
+	}
 .gallery
 	{
-		width: 80%;
-		margin: auto;
+			transform-style: preserve-3d;
+			height: 100%;
+	}
+.frame
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
 		display: flex;
-		flex-wrap: wrap;
-		margin-bottom: 50px;
+		align-items: center;
+		justify-content: center;
+		transition: var(--transition),opacity .75s ease;
+		will-change: transform;
+		transform-style: preserve-3d;
 	}
-.photo-itm
+.frame--content h2
 	{
-		width: 25%;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: calc(var(--index)*3.3);
+		line-height: 1;
+		width: min-content;
+		text-align: center;
 	}
-.photo-itm img
+.frame--media
 	{
-		box-sizing: border-box;
-		max-width: 100%;
+		position: relative;
+		width: calc(var(--index) * var(--side-small));
+		height: calc(var(--index) * var(--side-big));
+		background-position: center;
+		background-size: cover;
 	}
+.frame--media-left
+	{
+		right: calc(var(--side-small) / 2 * var(--index));
+		margin-right: 30px;
+	}
+.frame--media-right
+	{
+		left: calc(var(--side-small) / 2 * var(--index));
+		margin-left: 30px;
+	}
+.frame-background
+	{
+		margin: 0;
+		background-color: rgb(0 0 0 / .88);
+	}
+.frame--media video
+	{
+		width: calc(var(--index) / 1.5 * var(--side-big));
+		height: calc(var(--index) / 1.5* var(--side-small));
+		margin: 30px;
+	}
+
 .blog-container
 	{
 		font-family: monospace;
 		background-color: #fafafa;
 		border-radius: 5px;
+		border: solid 1px white;
 		box-shadow: rgba(0, 0, 0, 0.2) 0 4 px 2 px -2px;
 		font-weight: 100;
 		margin: 48px auto;
@@ -198,6 +285,7 @@ footer .footer_logo
 	}
 .blog-container h1
 	{
+		color: black;
 		font-size:default;font-weight: default;
 		font-family: 'Raleway', sans-serif
 	}
@@ -216,7 +304,7 @@ footer .footer_logo
 	}	
 .blog-tittle
 	{
-		color: Black;
+		color: white;
 		font-size: 16px;
 	}
 .blog-text p
@@ -249,7 +337,7 @@ footer .footer_logo
 		padding: 0 .5rem;
 		text-align: center;
 		text-transform: uppercase;
-		white-space: nowrap;
+		black-space: nowrap;
 		width: 5rem;
 	}
 .blog-footer
@@ -274,13 +362,69 @@ footer .footer_logo
 		text-align: center;
 		text-transform: uppercase;
 		position: relative;
-		white-space: nowrap;
+		black-space: nowrap;
 	}
 .published-date
 	{
 		border: 1px solid grey;
 		border-radius: 3px;
 		padding: 0 .5rem;
+	}
+.form
+	{
+		width: 50%;
+		margin: 50px auto;
+	}
+.feedback-input
+	{
+		color: #000;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		background-color: #fff;
+		padding: 13px;
+		margin-bottom: 10px;
+		width: 100%;
+		border:  0px solid transparent;
+		border-bottom: 1px solid white;
+	}
+textarea
+	{
+		width: 100%;
+		height: 150px;
+		resize: vertical;
+	}
+.button-submit
+	{
+		float: left;
+		width: 100%;
+		border: 0px solid transparent;
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		font-size: 18px;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		transition:all 0.3s ;
+		margin-top: -4px;
+		font-weight: 300;
+	}
+.button-submit:hover
+	{
+		 background-color: black;
+		 color: white;
+		 border: 1px solid white;
+	}
+main
+	{
+		margin-bottom: 25px;
+	}
+.ease
+	{
+		width: 0;
+		height: 74px;
+		background-color: grey;
+		transition: .3 ease;
 	}
 @media screen and (max-width: 768px) /* Делаем определенные настройки для экранов меньше 768px */
 	{
@@ -293,12 +437,12 @@ footer .footer_logo
 				float: right;
 				margin-top: -17px;
 				display: block;
-				color: black;
+				color: white;
 			}
 		nav
 		{
 			width: 100%;
-			height: 100px;
+			height: 50px;
 		}
 		.topmenu.responsive
 		{
@@ -324,18 +468,34 @@ footer .footer_logo
 		{
 			width: 100%;
 		}
-		.photo-itm
-		{
-			width: 45%;
-			margin-left: 10px;
-			margin-bottom: 10px;
-		}
 		.blog-container
 		{
 		width: 28rem;
 		}
-	}
+		.project
+			{
+				margin-top: -30px;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+		.project-container
+			{
+				perspective: 2000px; /**/
+			}
 
+		.frame
+			{
+				width: 100%;
+				height: 50%;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: var(--transition),opacity .75s ease;
+				will-change: transform;
+				transform-style: preserve-3d;
+			}
+	}
 @media screen and (max-width: 900px)
 	{
 		.main_photo
@@ -345,15 +505,26 @@ footer .footer_logo
 				height: 300px;
 			}
 		.project
-		{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.gallery
-		{
-			margin: auto;
-			width: auto;	
-		}
-			
+			{
+				margin-top: -30px;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+		.project-container
+			{
+				perspective: 2000px; /**/
+			}
+
+		.frame
+			{
+				width: 100%;
+				height: 70%;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: var(--transition),opacity .75s ease;
+				will-change: transform;
+				transform-style: preserve-3d;
+			}	
 	}
