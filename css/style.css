@@ -198,8 +198,8 @@ footer .footer_logo
 .project
  	{
  		margin: 0;
- 		margin-top: -50px;
  		padding: 0;
+ 		margin-top: -30px;
  		box-sizing: border-box;
  		background-color: black;
 		color: white;
@@ -386,7 +386,11 @@ footer .footer_logo
 		margin-bottom: 10px;
 		width: 100%;
 		border:  0px solid transparent;
+<<<<<<< HEAD
 		border-bottom: 1px solid white;
+=======
+		border-bottom: 1px solid black;
+>>>>>>> a859636be3441505fc112d739b5b5a0eb2176c94
 	}
 textarea
 	{
@@ -400,8 +404,13 @@ textarea
 		width: 100%;
 		border: 0px solid transparent;
 		cursor: pointer;
+<<<<<<< HEAD
 		background-color: white;
 		color: black;
+=======
+		background-color: black;
+		color: white;
+>>>>>>> a859636be3441505fc112d739b5b5a0eb2176c94
 		font-size: 18px;
 		padding-top: 22px;
 		padding-bottom: 22px;
@@ -411,9 +420,15 @@ textarea
 	}
 .button-submit:hover
 	{
+<<<<<<< HEAD
 		 background-color: black;
 		 color: white;
 		 border: 1px solid white;
+=======
+		 background-color: white;
+		 color: black;
+		 border: 1px solid black;
+>>>>>>> a859636be3441505fc112d739b5b5a0eb2176c94
 	}
 main
 	{
@@ -505,6 +520,7 @@ main
 				height: 300px;
 			}
 		.project
+<<<<<<< HEAD
 			{
 				margin-top: -30px;
 				margin-left: 15px;
@@ -527,4 +543,17 @@ main
 				will-change: transform;
 				transform-style: preserve-3d;
 			}	
+=======
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.gallery
+		{
+			margin: auto;
+			width: auto;	
+		}
+			
+>>>>>>> a859636be3441505fc112d739b5b5a0eb2176c94
 	}
